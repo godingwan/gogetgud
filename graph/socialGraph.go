@@ -1,3 +1,7 @@
+/*
+Graph problem: Check if a node is connected to another node through other intermediary nodes
+*/
+
 package main
 
 import "fmt"
