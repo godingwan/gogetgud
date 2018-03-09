@@ -86,19 +86,23 @@ func main() {
 	var n1 Node
 	var n2 Node
 	var n3 Node
+	var n4 Node
 
 	n1.FirstName = "arc"
 	n2.FirstName = "bob"
 	n3.FirstName = "unkani"
+	n4.FirstName = "random"
 
 	var twitter SocialGraph
 
 	twitter.AddNode(&n1)
 	twitter.AddNode(&n2)
 	twitter.AddNode(&n3)
+	twitter.AddNode(&n4)
 
 	twitter.AddEdge(&n1, &n3) // arc and unkani
 	twitter.AddEdge(&n2, &n3) // unkani and bob
 
 	fmt.Println("Are arc and bob connected?", twitter.IsRelated(&n1, &n2))
+	fmt.Println("Are unkani and random connected?", twitter.IsRelated(&n3, &n4))
 }
